@@ -72,6 +72,17 @@ export interface YTCoreConfig {
      * Enables YT-password authentication when defined
      */
     ytAuthCluster?: string;
+
+    ytOAuthSettings?: {
+        baseURL: string;
+        authPath: string;
+        logoutPath: string;
+        tokenPath: string;
+        clientId: string;
+        clientSecret: string;
+        scope: string;
+        buttonLabel?: string;
+    };
     /**
      * Modifies headers of /api/yt/login request:
      * if enabled removes 'Secure'-option from 'Set-Cookie: YTCypressCookie=...; ...' response-header
